@@ -68,15 +68,17 @@ cout<<" popped "<<ele;
 };
 
 int main()
-{ stack <int> s;
-int a =2;
+{ stack <char> s;
+ 
   if(s.isEmpty())
      cout<<"\nstack is empty ";
-  s.push(a);
+  s.push('a');
   cout<<"\ntop element is "<<s.peek();
-  s.push(3);
+  s.push('b');
   cout<<"\ntop element is "<<s.peek();
   s.pop();
-
+  cout<<"\nafter popping top element is "<<s.peek();
+  s.pop();
+  cout<<endl;
   return 0;
 }
