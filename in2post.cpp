@@ -40,6 +40,7 @@ cout<<endl;
       if(str[i]==')')
        {while(s.top()!='(')
            {cout<<s.top(); s.pop();};
+         s.pop();
          s.pop(); 
          }
    else
@@ -66,6 +67,7 @@ while(!s.empty())
 
 return 0;
 }
+
 
 
 
