@@ -79,10 +79,17 @@ void SLinkedList :: addBack(const string& e) 			// add to back of list
       SNode *newnod= new SNode;
       newnod->elem=e;
       newnod->next=NULL;
+      if(head==NULL)
+      { head=newnod;
+	  }
+	  else
+	  {
+	  
       temp=head;
       while(temp->next!=NULL)
       {temp=temp->next;};
-      temp->next=newnod;     
+      temp->next=newnod;
+      }
     };
 void SLinkedList :: removeFront()			 			// remove from front
 { SNode *temp= new SNode;
@@ -131,7 +138,7 @@ void SLinkedList :: print() 							// prints the SLL
    	 temp=temp->next;
    };
    if (temp!=NULL)
-    cout<<temp->elem;
+    cout<<" "<<temp->elem;
   }
 };
 
@@ -185,3 +192,4 @@ int main()
 
 
 }
+
