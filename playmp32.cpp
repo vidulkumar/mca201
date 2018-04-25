@@ -4,11 +4,19 @@
 using namespace std;
 int main()
 {
- MCIERROR a= mciSendString("open E:\\songs\\abcdef.mp3 type mpegvideo alias song1",NULL,0,0);
-   if (a==0)
-   {
-       a=mciSendString("play song1 wait",NULL,0,0);
-       mciSendString("close song1", NULL,0,0);
-   }
 
+After much trial and error, the following works for me:
+
+LPCWSTR a = L"open cannon.mp3 type mpegvideo";                  
+
+int error = 99;                  
+
+error = mciSendString(a, NULL,0,0);                  
+
+int error2;                  
+
+LPCWSTR b = L"play cannon.mp3";                
+
+error2 = mciSendString(b, NULL, 0, 0)
 }
+  
